@@ -1,0 +1,575 @@
+/* Add JS for wrandom pastel colors  */
+/* BODY - Centers the entire #game container */
+body {
+    /* Box Model */
+    width: 98%;
+    height: 100vh;
+    /* border: 5px solid black; */
+    padding: 10px;
+
+    /* Layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Typography */
+    font-size: 20px;
+    font-weight: bold;
+
+    /* Visual Styles */
+    background-color: rgb(238, 187, 238);
+}
+
+/* GAME - Contains both the stickman and controls side by side */
+#game {
+    /* Box Model */
+    width: 97%;
+    height: 100vh;
+    /* border: 5px solid black; */
+
+    /* Layout */
+    display: flex; /* row by default: stickman + controls side-by-side */
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    /* Visual Styles */
+    /* background-color: lightblue; */
+    
+}
+
+/* STICKMAN - The box on the left for the hangman figure */
+#stickman {
+    /* Box Model */
+    width: 40%;
+    height: 700px;
+    /* border: 5px solid black; */
+    margin: 20px;
+
+    /* Layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Visual Styles */
+    background-color: rgb(168, 220, 239);
+}
+
+/* CONTROLS - Contains start + alphabet stacked vertically on the right */
+#controls {
+    /* Layout */
+    display: flex;
+    flex-direction: column; /* stacks children vertically */
+    justify-content: flex-end;
+    margin: 20px;
+    width: 100%;
+}
+
+/* START-AL - Shared styles for both #start and #alphabet boxes */
+.start-al {
+    /* Box Model */
+    height: 100px;
+    /* border: 5px solid black; */
+    margin-bottom: 20px;
+    margin: 40px;
+    padding: 45px;
+
+    /* Layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-button {
+    background-color: rgb(225, 67, 236); /* purple-pink tone */
+    color: white;
+    border: none;
+    font-size: 50px;
+    padding: 40px 200px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .game-button:hover {
+    background-color: rgb(174, 27, 182); /* darker shade on hover */
+  }
+
+#start {
+     /* Visual Styles */
+     /* background-color: rebeccapurple; */
+     font-size: 50px;
+     color: rgb(225, 67, 236);
+}
+
+#alphebet {
+    /* Box Model */
+    margin-top: 170px;
+    /* Visual Styles */
+    /* background-color: rgb(176, 7, 97); */
+    font-size: 35px;
+    color: rgb(157, 12, 152);
+}
+
+.alphabet-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .letter-button {
+    background-color: rgb(157, 12, 152); /* matches your text color */
+    color: white;
+    border: none;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .letter-button:hover {
+    background-color: rgb(120, 5, 117); /* a darker purple on hover */
+  }
+
+  /* Add JS for when pressed */
+  .letter-button:pressed {
+    background-color: rgb(120, 5, 117); /* a darker purple on hover */
+    opacity: 0.5;
+    pointer-events: none;
+  }
+/* ------------------------------------------------------------------------------------------------------------------------------------- */
+/* Dash Button */
+/* BODY - Centers the entire #dash container */
+body#dashes-page {
+  /* Box Model */
+  width: 98%;
+  height: 100vh;
+  /* border: 5px solid black; */
+  padding: 10px;
+
+  /* Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Typography */
+  font-size: 20px;
+  font-weight: bold;
+
+  /* Visual Styles */
+  background-color: rgb(238, 187, 238);
+}
+
+/* GAME - Contains both the stickman and controls side by side */
+#dashes {
+  /* Box Model */
+  width: 97%;
+  height: 100vh;
+  /* border: 5px solid black; */
+
+  /* Layout */
+  display: flex; /* row by default: stickman + controls side-by-side */
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  /* Visual Styles */
+  /* background-color: lightblue; */
+  
+}
+
+/* STICKMAN - The box on the left for the hangman figure */
+#stickman {
+  /* Box Model */
+  width: 40%;
+  height: 700px;
+  /* border: 5px solid black; */
+  margin: 20px;
+
+  /* Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Visual Styles */
+  background-color: rgb(168, 220, 239);
+}
+
+/* CONTROLS - Contains start + alphabet stacked vertically on the right */
+#dashes-play {
+  /* Layout */
+  display: flex;
+  flex-direction: column; /* stacks children vertically */
+  justify-content: flex-end;
+  margin: 20px;
+  width: 100%;
+}
+
+/* START-AL - Shared styles for both #start and #alphabet boxes */
+.phrase-al {
+  /* Box Model */
+  height: 100px;
+  /* border: 5px solid black; */
+  margin-bottom: 20px;
+  margin: 40px;
+  padding: 45px;
+
+  /* Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dash-button {
+  background-color: rgb(225, 67, 236); /* purple-pink tone */
+  color: white;
+  border: none;
+  font-size: 50px;
+  padding: 40px 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dash-button:hover {
+  background-color: rgb(174, 27, 182); /* darker shade on hover */
+}
+
+#phrase {
+   /* Visual Styles */
+   /* background-color: rebeccapurple; */
+   font-size: 50px;
+   color: rgb(225, 67, 236);
+}
+
+#alphebet {
+  /* Box Model */
+  margin-top: 170px;
+  /* Visual Styles */
+  /* background-color: rgb(176, 7, 97); */
+  font-size: 35px;
+  color: rgb(157, 12, 152);
+}
+
+.alphabet-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.letter-button {
+  background-color: rgb(157, 12, 152); /* matches your text color */
+  color: white;
+  border: none;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.letter-button:hover {
+  background-color: rgb(120, 5, 117); /* a darker purple on hover */
+}
+
+/* Add JS for when pressed */
+.letter-button:pressed {
+  background-color: rgb(120, 5, 117); /* a darker purple on hover */
+  opacity: 0.5;
+  pointer-events: none;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------- */
+/* Win Phrase */
+/* BODY - Centers the entire #dash container */
+body#win-page {
+  /* Box Model */
+  width: 98%;
+  height: 100vh;
+  /* border: 5px solid black; */
+  padding: 10px;
+
+  /* Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Typography */
+  font-size: 20px;
+  font-weight: bold;
+
+  /* Visual Styles */
+  background-color: rgb(238, 187, 238);
+}
+
+/* GAME - Contains both the stickman and controls side by side */
+#winPage {
+  /* Box Model */
+  width: 97%;
+  height: 100vh;
+  /* border: 5px solid black; */
+
+  /* Layout */
+  display: flex; /* row by default: stickman + controls side-by-side */
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  /* Visual Styles */
+  /* background-color: lightblue; */
+  
+}
+
+/* STICKMAN - The box on the left for the hangman figure */
+#stickman {
+  /* Box Model */
+  width: 40%;
+  height: 700px;
+  /* border: 5px solid black; */
+  margin: 20px;
+
+  /* Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Visual Styles */
+  background-color: rgb(168, 220, 239);
+}
+
+/* CONTROLS - Contains start + alphabet stacked vertically on the right */
+#win-game {
+  /* Layout */
+  display: flex;
+  flex-direction: column; /* stacks children vertically */
+  justify-content: flex-end;
+  margin: 20px;
+  width: 100%;
+}
+
+/* START-AL - Shared styles for both #start and #alphabet boxes */
+.win-al {
+  /* Box Model */
+  height: 100px;
+  /* border: 5px solid black; */
+  margin-bottom: 20px;
+  margin: 40px;
+  padding: 45px;
+
+  /* Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.win-button {
+  background-color: rgb(225, 67, 236); /* purple-pink tone */
+  color: white;
+  border: none;
+  font-size: 50px;
+  padding: 40px 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.win-button:hover {
+  background-color: rgb(174, 27, 182); /* darker shade on hover */
+}
+
+#win {
+   /* Visual Styles */
+   /* background-color: rebeccapurple; */
+   font-size: 50px;
+   color: rgb(225, 67, 236);
+}
+
+#alphebet {
+  /* Box Model */
+  margin-top: 170px;
+  /* Visual Styles */
+  /* background-color: rgb(176, 7, 97); */
+  font-size: 35px;
+  color: rgb(157, 12, 152);
+}
+
+.alphabet-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.letter-button {
+  background-color: rgb(157, 12, 152); /* matches your text color */
+  color: white;
+  border: none;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.letter-button:hover {
+  background-color: rgb(120, 5, 117); /* a darker purple on hover */
+}
+
+/* Add JS for when pressed */
+.letter-button:pressed {
+  background-color: rgb(120, 5, 117); /* a darker purple on hover */
+  opacity: 0.5;
+  pointer-events: none;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------- */
+/* Lose Phrase */
+/* BODY - Centers the entire #lose container */
+body#lose-page {
+  /* Box Model */
+  width: 40%;
+  height: 100vh;
+  /* border: 5px solid black; */
+  padding: 10px;
+
+  /* Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Typography */
+  font-size: 20px;
+  font-weight: bold;
+
+  /* Visual Styles */
+  background-color: rgb(238, 187, 238);
+}
+
+/* GAME - Contains both the stickman and controls side by side */
+#losePage {
+  /* Box Model */
+  width: 97%;
+  height: 100vh;
+  /* border: 5px solid black; */
+
+  /* Layout */
+  display: flex; /* row by default: stickman + controls side-by-side */
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  /* Visual Styles */
+  /* background-color: lightblue; */
+  
+}
+
+/* STICKMAN - The box on the left for the hangman figure */
+#stickman {
+  /* Box Model */
+  width: 20%;
+  height: 700px;
+  /* border: 5px solid black; */
+  margin: 20px;
+
+  /* Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Visual Styles */
+  background-color: rgb(168, 220, 239);
+}
+
+/* CONTROLS - Contains start + alphabet stacked vertically on the right */
+#lose-game {
+  /* Layout */
+  display: flex;
+  flex-direction: column; /* stacks children vertically */
+  justify-content: flex-end;
+  margin: 20px;
+  width: 100%;
+}
+
+/* START-AL - Shared styles for both #start and #alphabet boxes */
+.lose-al {
+  /* Box Model */
+  height: 100px;
+  /* border: 5px solid black; */
+  margin-bottom: 20px;
+  margin: 40px;
+  padding: 45px;
+
+  /* Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lose-button {
+  background-color: rgb(225, 67, 236); /* purple-pink tone */
+  color: white;
+  border: none;
+  font-size: 50px;
+  padding: 40px 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.win-button:hover {
+  background-color: rgb(174, 27, 182); /* darker shade on hover */
+}
+
+#win {
+   /* Visual Styles */
+   /* background-color: rebeccapurple; */
+   font-size: 50px;
+   color: rgb(225, 67, 236);
+}
+
+#alphebet {
+  /* Box Model */
+  margin-top: 170px;
+  /* Visual Styles */
+  /* background-color: rgb(176, 7, 97); */
+  font-size: 35px;
+  color: rgb(157, 12, 152);
+}
+
+.alphabet-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.letter-button {
+  background-color: rgb(157, 12, 152); /* matches your text color */
+  color: white;
+  border: none;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.letter-button:hover {
+  background-color: rgb(120, 5, 117); /* a darker purple on hover */
+}
+
+/* Add JS for when pressed */
+.letter-button:pressed {
+  background-color: rgb(120, 5, 117); /* a darker purple on hover */
+  opacity: 0.5;
+  pointer-events: none;
+}
